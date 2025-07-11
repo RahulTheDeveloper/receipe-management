@@ -54,9 +54,6 @@ You can use the provided Postman collection to test the entire API.
 - Downloading recipe PDF
 - Getting counts & ratings
 
-
-## 📁 Project Structure
-
 ## 📂 Project Structure
 
 ```plaintext
@@ -96,7 +93,7 @@ recipe-management/
 ├── requirements.txt      # Python dependencies
 └── README.md             # Project documentation
 
-
+```
 
 
 ---
