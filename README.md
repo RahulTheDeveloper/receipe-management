@@ -133,6 +133,16 @@ recipe-management/
 
 ---
 
+### ⭐ Users
+
+| Method | Endpoint                  | Description                            |
+| ------ | ------------------------- | -------------------------------------- |
+| POST   | `/auth/register-user/`    | Register a new user (creator / viewer) |
+| POST   | `/auth/login/`            | Login & get access + refresh tokens    |
+| POST   | `/auth/logout/`           | Logout (invalidate refresh token)      |
+| POST   | `/auth/get-access-token/` | Get new access token using refresh     |
+
+
 ### 📄 Excel Bulk Upload
 
 | Method | Endpoint                    | Description                                           |
