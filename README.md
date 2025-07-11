@@ -22,6 +22,18 @@ A Django REST Framework based API for managing recipes, built as part of a techn
 
 ---
 
+## 🛠️ Tech Stack
+
+| Layer       | Technology                |
+|-------------|---------------------------|
+| Backend     | Django (Python)           |
+| Database    | PostgreSQL                |
+| Caching     | Redis                     |
+| Task Queue  | Celery                    |
+| Web Server  | Nginx                     |
+| Deployment  | Docker, AWS (EC2)    |
+
+
 ## 🚀 Postman Collection
 
 You can use the provided Postman collection to test the entire API.
