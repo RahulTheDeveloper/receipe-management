@@ -57,6 +57,9 @@ You can use the provided Postman collection to test the entire API.
 
 ## 📁 Project Structure
 
+## 📂 Project Structure
+
+```plaintext
 recipe-management/
 │
 ├── app/                  # Django app for recipes, cuisines, ingredients, ratings, favourites
