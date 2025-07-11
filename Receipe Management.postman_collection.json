@@ -1,0 +1,1980 @@
+{
+	"info": {
+		"_postman_id": "14a90cb4-2293-4a53-a3b1-991dd531ee73",
+		"name": "Receipe Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34406608",
+		"_collection_link": "https://survey-quiz.postman.co/workspace/Food-Management~670e309e-c47c-4f82-992f-75c6683025b9/collection/34406608-14a90cb4-2293-4a53-a3b1-991dd531ee73?action=share&source=collection_link&creator=34406608"
+	},
+	"item": [
+		{
+			"name": "AUTH",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"admin@gmail.com\",\n    \"name\": \"admin\",\n    \"password\": \"admin\",\n    \"user_type\" : \"creator\"  // \"viewer\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/auth/register-user/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"auth",
+								"register-user",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"admin@gmail.com\",\n    \"name\": \"admin\",\n    \"password\": \"admin\",\n    \"user_type\" : \"creator\"  // \"viewer\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/auth/register-user/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"auth",
+										"register-user",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 10 Jul 2025 15:34:27 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "583"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": {\n        \"id\": 1,\n        \"email\": \"admin@gmail.com\",\n        \"username\": null,\n        \"phone_number\": null,\n        \"user_type\": \"creator\"\n    },\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUyMTY1MjY3LCJpYXQiOjE3NTIxNjE2NjcsImp0aSI6IjQ3Zjk2MWRiN2UzZDQ2YTQ4ZjQ5ZjYxYzNhMGJhODM3IiwidXNlcl9pZCI6MX0.QSYaVjOlCIFh9urp9rILE4U8_KyJgk8pvdvbcYH2vxM\",\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc1MjI0ODA2NywiaWF0IjoxNzUyMTYxNjY3LCJqdGkiOiJiZGM0ZTA4YThkYTI0NmQ5YjNjZTZhYThiNzgyZjRmMCIsInVzZXJfaWQiOjF9.ORrAMMJ92MjrsvvnwbIFDqOzJkX3i7Z_KvpZTZCbVpo\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"admin@gmail.com\",\n    \"password\": \"admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/auth/login/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"auth",
+								"login",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"admin@gmail.com\",\n    \"password\": \"admin\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/auth/login/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"auth",
+										"login",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 10 Jul 2025 15:37:27 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "530"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"user\": {\n        \"email\": \"admin@gmail.com\",\n        \"name\": null\n    },\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUyMTY1NDQ3LCJpYXQiOjE3NTIxNjE4NDcsImp0aSI6Ijg0NWM2Y2MwNmZlODRhOTJiYjUyMTJjOTA1YTk3MzIyIiwidXNlcl9pZCI6MX0.aJp8OyipU1H2p3DwmgVBrMQV4sugLM-0YC8lIFvW6dQ\",\n    \"refresh\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc1MjI0ODI0NywiaWF0IjoxNzUyMTYxODQ3LCJqdGkiOiJhZDhiOTkxNGU3YmI0NDY4Yjc2NDU4NTAzMmFmZDBjYyIsInVzZXJfaWQiOjF9.ydHgqXDPFcLqsdiVnLh5c5D-HBykEf-wj18QIms-Fys\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Access Token",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"refresh\" : {{refresh_token}}\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/auth/get-access-token/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"auth",
+								"get-access-token",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"refresh\" : \"{{refresh_token}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/auth/get-access-token/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"auth",
+										"get-access-token",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 11 Jul 2025 07:50:12 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.18"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "241"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"access\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzUyMjIzODEyLCJpYXQiOjE3NTIyMTk5MTksImp0aSI6ImE0MjBhNjE4YWU1YzQxYjg5YjE5MDQ5ODBlNWVmMzRkIiwidXNlcl9pZCI6MX0.KnvDWoeuGJ3XOHkK_OdgBgWrd5xEJxktjHU7U6BVP3Q\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/auth/logout/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"auth",
+								"logout",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"refresh\": \"{{refresh_token}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/auth/logout/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"auth",
+										"logout",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 10 Jul 2025 15:49:19 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "38"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Successfully logged out.\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Creator",
+			"item": [
+				{
+					"name": "Create Cuisine",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Chinese",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/prabhat/Pictures/Screenshots/Screenshot from 2025-07-06 14-40-29.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/app/create-cuisine/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"app",
+								"create-cuisine",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Chinese",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/home/prabhat/Pictures/Screenshots/Screenshot from 2025-07-06 14-40-29.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/app/create-cuisine/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"app",
+										"create-cuisine",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 10 Jul 2025 17:19:36 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "112"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Cuisine created successfully\",\n    \"data\": {\n        \"id\": \"6368a720-51f1-49ce-9a39-3cdddc1a79f6\",\n        \"name\": \"Chinese\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Ingredients",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Refined Oil",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/prabhat/Pictures/Screenshots/Screenshot from 2025-07-06 14-40-29.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/app/create-ingredients/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"app",
+								"create-ingredients",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Refined Oil",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/home/prabhat/Pictures/Screenshots/Screenshot from 2025-07-06 14-40-29.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/app/create-ingredients/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"app",
+										"create-ingredients",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 10 Jul 2025 17:04:09 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "135"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"e66cf8f0-d825-4ff0-bf79-41ff54db3863\",\n    \"name\": \"Refined Oil\",\n    \"image\": \"/ingredient_images/Screenshot_from_2025-07-06_14-40-29.png\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Step Picture",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/app/create-step-picture/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"app",
+								"create-step-picture",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/home/prabhat/Pictures/Screenshots/Screenshot from 2025-07-06 14-40-29.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/app/create-step-picture/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"app",
+										"create-step-picture",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 10 Jul 2025 17:27:42 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "166"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Step picture uploaded successfully\",\n    \"data\": {\n        \"id\": \"f1e5bb72-b5dd-424f-bec3-14034df13014\",\n        \"image\": \"/step_pictures/Screenshot_from_2025-07-06_14-40-29.png\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Receipe",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/app/create-receipe/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"app",
+								"create-receipe",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Receipe",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Test Recipe",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Yummy",
+											"type": "text"
+										},
+										{
+											"key": "instructions",
+											"value": "Don't Cook",
+											"type": "text"
+										},
+										{
+											"key": "prep_duration",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "cook_duration",
+											"value": "10",
+											"type": "text"
+										},
+										{
+											"key": "cuisine",
+											"value": "6368a72051f149ce9a393cdddc1a79f6",
+											"type": "text"
+										},
+										{
+											"key": "thumbnail",
+											"type": "file",
+											"src": "/home/prabhat/Pictures/Screenshots/Screenshot from 2025-07-06 14-40-29.png"
+										},
+										{
+											"key": "ingredients",
+											"value": "e66cf8f0d8254ff0bf7941ff54db3863",
+											"type": "text"
+										},
+										{
+											"key": "ingredients",
+											"value": "a1bf67586fa74011849c5a411d7eceb4",
+											"type": "text"
+										},
+										{
+											"key": "step_pictures",
+											"value": "f1e5bb72b5dd424fbec314034df13014",
+											"type": "text"
+										},
+										{
+											"key": "step_pictures",
+											"value": "dd8523a811884ab7b661f9eff09a9840",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/app/create-receipe/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"app",
+										"create-receipe",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 10 Jul 2025 17:59:38 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "250"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"2b96e996-de18-45ec-a22d-82481f41c4b1\",\n    \"title\": \"Test Recipe\",\n    \"description\": \"Yummy\",\n    \"instructions\": \"Don't Cook\",\n    \"prep_duration\": 20,\n    \"cook_duration\": 10,\n    \"thumbnail\": \"http://127.0.0.1:8000/thumbnails/Screenshot_from_2025-07-06_14-40-29_ti7St0t.png\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Receipe",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/app/create-receipe/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"app",
+								"create-receipe",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Receipe",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Update Recipe",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "Not Yummy!!",
+											"type": "text"
+										},
+										{
+											"key": "instructions",
+											"value": "Don't Cook",
+											"type": "text"
+										},
+										{
+											"key": "prep_duration",
+											"value": "20",
+											"type": "text"
+										},
+										{
+											"key": "cook_duration",
+											"value": "10",
+											"type": "text"
+										},
+										{
+											"key": "cuisine",
+											"value": "6368a72051f149ce9a393cdddc1a79f6",
+											"type": "text"
+										},
+										{
+											"key": "ingredients",
+											"value": "e66cf8f0d8254ff0bf7941ff54db3863",
+											"type": "text"
+										},
+										{
+											"key": "ingredients",
+											"value": "a1bf67586fa74011849c5a411d7eceb4",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "step_pictures",
+											"value": "f1e5bb72b5dd424fbec314034df13014",
+											"type": "text"
+										},
+										{
+											"key": "step_pictures",
+											"value": "dd8523a811884ab7b661f9eff09a9840",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/app/create-receipe/?pk=2b96e996-de18-45ec-a22d-82481f41c4b1",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"app",
+										"create-receipe",
+										""
+									],
+									"query": [
+										{
+											"key": "pk",
+											"value": "2b96e996-de18-45ec-a22d-82481f41c4b1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 10 Jul 2025 18:25:47 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, PATCH, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "258"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"2b96e996-de18-45ec-a22d-82481f41c4b1\",\n    \"title\": \"Update Recipe\",\n    \"description\": \"Not Yummy!!\",\n    \"instructions\": \"Don't Cook\",\n    \"prep_duration\": 20,\n    \"cook_duration\": 10,\n    \"thumbnail\": \"http://127.0.0.1:8000/thumbnails/Screenshot_from_2025-07-06_14-40-29_ti7St0t.png\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Receipe",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Chinese",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/home/prabhat/Pictures/Screenshots/Screenshot from 2025-07-06 14-40-29.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/app/delete-receipe/?id=2b96e996de1845eca22d82481f41c4b1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"app",
+								"delete-receipe",
+								""
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2b96e996de1845eca22d82481f41c4b1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Receipe",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Chinese",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/home/prabhat/Pictures/Screenshots/Screenshot from 2025-07-06 14-40-29.png"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/app/delete-receipe/?id=2b96e996de1845eca22d82481f41c4b1",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"app",
+										"delete-receipe",
+										""
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "2b96e996de1845eca22d82481f41c4b1"
+										}
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 10 Jul 2025 18:54:44 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "DELETE, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "42"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Recipe deleted successfully.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Upload Excel",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/app/upload-excel/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"app",
+								"upload-excel",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Upload Excel",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/home/prabhat/Desktop/receipe_management_system/Receipe_Excel.xlsx"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/app/upload-excel/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"app",
+										"upload-excel",
+										""
+									]
+								}
+							},
+							"status": "Accepted",
+							"code": 202,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 11 Jul 2025 07:00:52 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.18"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "48"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"File uploaded. Processing started.\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Viewer",
+			"item": [
+				{
+					"name": "Create-favourites",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/app/favourites/25d9926287f94b3eb0c8d33c7735b25b/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"app",
+								"favourites",
+								"25d9926287f94b3eb0c8d33c7735b25b",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/app/create-favourites/?recipe_id=25d9926287f94b3eb0c8d33c7735b25b",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"app",
+										"create-favourites",
+										""
+									],
+									"query": [
+										{
+											"key": "recipe_id",
+											"value": "25d9926287f94b3eb0c8d33c7735b25b"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 10 Jul 2025 19:12:20 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, DELETE, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "32"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"added to favourites\"\n}"
+						}
+					]
+				},
+				{
+					"name": "create-ratings",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"recipe\": \"3e03cebd218b4d939d39c1361fda7800\",\n    \"score\" : \"3\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/app/create-ratings/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"app",
+								"create-ratings",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"recipe\": \"3e03cebd218b4d939d39c1361fda7800\",\n    \"score\" : \"3\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/app/create-ratings/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"app",
+										"create-ratings",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 10 Jul 2025 19:26:10 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "POST, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "103"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"da629ee4-fbdf-453b-8e72-4d184e96e1a1\",\n    \"recipe\": \"3e03cebd-218b-4d93-9d39-c1361fda7800\",\n    \"score\": 3\n}"
+						}
+					]
+				},
+				{
+					"name": "List Receipe",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/app/list-recipes/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"app",
+								"list-recipes",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "pagination Using Limit & Offset",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/app/list-recipes/?limit=5&offset=10",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"app",
+										"list-recipes",
+										""
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "5"
+										},
+										{
+											"key": "offset",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 10 Jul 2025 21:08:26 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "113"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 7,\n    \"next\": null,\n    \"previous\": \"http://127.0.0.1:8000/api/v1/app/list-recipes/?limit=5&offset=5\",\n    \"results\": []\n}"
+						},
+						{
+							"name": "Default Pagination",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/app/list-recipes/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"app",
+										"list-recipes",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 10 Jul 2025 21:09:30 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "3781"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 7,\n    \"next\": null,\n    \"previous\": null,\n    \"results\": [\n        {\n            \"id\": \"49f2e79e-3934-45bb-91ad-d0d56b2131cb\",\n            \"title\": \"Test Recipe\",\n            \"description\": \"Yummy\",\n            \"instructions\": \"Don't Cook\",\n            \"prep_duration\": 20,\n            \"cook_duration\": 10,\n            \"thumbnail\": \"/thumbnails/Screenshot_from_2025-07-06_14-40-29_jJufkoa.png\",\n            \"cuisine\": null,\n            \"ingredients\": [],\n            \"step_pictures\": []\n        },\n        {\n            \"id\": \"2f0a7499-c27a-4c06-ace9-3f7efe5092a1\",\n            \"title\": \"Test Recipe\",\n            \"description\": \"Yummy\",\n            \"instructions\": \"Don't Cook\",\n            \"prep_duration\": 20,\n            \"cook_duration\": 10,\n            \"thumbnail\": null,\n            \"cuisine\": null,\n            \"ingredients\": [],\n            \"step_pictures\": []\n        },\n        {\n            \"id\": \"3e03cebd-218b-4d93-9d39-c1361fda7800\",\n            \"title\": \"Test Recipe\",\n            \"description\": \"Yummy\",\n            \"instructions\": \"Don't Cook\",\n            \"prep_duration\": 20,\n            \"cook_duration\": 10,\n            \"thumbnail\": null,\n            \"cuisine\": null,\n            \"ingredients\": [],\n            \"step_pictures\": []\n        },\n        {\n            \"id\": \"0bd48483-441d-475a-b489-0f1738b79b15\",\n            \"title\": \"Test Recipe\",\n            \"description\": \"Yummy\",\n            \"instructions\": \"Don't Cook\",\n            \"prep_duration\": 20,\n            \"cook_duration\": 10,\n            \"thumbnail\": null,\n            \"cuisine\": {\n                \"id\": \"6368a720-51f1-49ce-9a39-3cdddc1a79f6\",\n                \"name\": \"Chinese\"\n            },\n            \"ingredients\": [\n                {\n                    \"id\": \"e66cf8f0-d825-4ff0-bf79-41ff54db3863\",\n                    \"name\": \"Refined Oil\",\n                    \"image\": \"/ingredient_images/Screenshot_from_2025-07-06_14-40-29.png\"\n                },\n                {\n                    \"id\": \"a1bf6758-6fa7-4011-849c-5a411d7eceb4\",\n                    \"name\": \"Onion\",\n                    \"image\": \"/ingredient_images/Screenshot_from_2025-07-06_14-40-29_b9OgsOH.png\"\n                }\n            ],\n            \"step_pictures\": [\n                {\n                    \"id\": \"dd8523a8-1188-4ab7-b661-f9eff09a9840\",\n                    \"image\": \"/step_pictures/Screenshot_from_2025-07-06_14-40-29_9tKY2No.png\"\n                },\n                {\n                    \"id\": \"f1e5bb72-b5dd-424f-bec3-14034df13014\",\n                    \"image\": \"/step_pictures/Screenshot_from_2025-07-06_14-40-29.png\"\n                }\n            ]\n        },\n        {\n            \"id\": \"09d136df-7bf4-44a0-8eb9-cab21e57fa6b\",\n            \"title\": \"Test Recipe\",\n            \"description\": \"Yummy\",\n            \"instructions\": \"Don't Cook\",\n            \"prep_duration\": 20,\n            \"cook_duration\": 10,\n            \"thumbnail\": \"/thumbnails/Screenshot_from_2025-07-06_14-40-29_Rh73yWc.png\",\n            \"cuisine\": {\n                \"id\": \"6368a720-51f1-49ce-9a39-3cdddc1a79f6\",\n                \"name\": \"Chinese\"\n            },\n            \"ingredients\": [\n                {\n                    \"id\": \"e66cf8f0-d825-4ff0-bf79-41ff54db3863\",\n                    \"name\": \"Refined Oil\",\n                    \"image\": \"/ingredient_images/Screenshot_from_2025-07-06_14-40-29.png\"\n                },\n                {\n                    \"id\": \"a1bf6758-6fa7-4011-849c-5a411d7eceb4\",\n                    \"name\": \"Onion\",\n                    \"image\": \"/ingredient_images/Screenshot_from_2025-07-06_14-40-29_b9OgsOH.png\"\n                }\n            ],\n            \"step_pictures\": [\n                {\n                    \"id\": \"dd8523a8-1188-4ab7-b661-f9eff09a9840\",\n                    \"image\": \"/step_pictures/Screenshot_from_2025-07-06_14-40-29_9tKY2No.png\"\n                },\n                {\n                    \"id\": \"f1e5bb72-b5dd-424f-bec3-14034df13014\",\n                    \"image\": \"/step_pictures/Screenshot_from_2025-07-06_14-40-29.png\"\n                }\n            ]\n        },\n        {\n            \"id\": \"25d99262-87f9-4b3e-b0c8-d33c7735b25b\",\n            \"title\": \"Test Recipe\",\n            \"description\": \"Yummy\",\n            \"instructions\": \"Don't Cook\",\n            \"prep_duration\": 20,\n            \"cook_duration\": 10,\n            \"thumbnail\": \"/thumbnails/Screenshot_from_2025-07-06_14-40-29_jthkZn0.png\",\n            \"cuisine\": {\n                \"id\": \"6368a720-51f1-49ce-9a39-3cdddc1a79f6\",\n                \"name\": \"Chinese\"\n            },\n            \"ingredients\": [\n                {\n                    \"id\": \"e66cf8f0-d825-4ff0-bf79-41ff54db3863\",\n                    \"name\": \"Refined Oil\",\n                    \"image\": \"/ingredient_images/Screenshot_from_2025-07-06_14-40-29.png\"\n                },\n                {\n                    \"id\": \"a1bf6758-6fa7-4011-849c-5a411d7eceb4\",\n                    \"name\": \"Onion\",\n                    \"image\": \"/ingredient_images/Screenshot_from_2025-07-06_14-40-29_b9OgsOH.png\"\n                }\n            ],\n            \"step_pictures\": [\n                {\n                    \"id\": \"dd8523a8-1188-4ab7-b661-f9eff09a9840\",\n                    \"image\": \"/step_pictures/Screenshot_from_2025-07-06_14-40-29_9tKY2No.png\"\n                },\n                {\n                    \"id\": \"f1e5bb72-b5dd-424f-bec3-14034df13014\",\n                    \"image\": \"/step_pictures/Screenshot_from_2025-07-06_14-40-29.png\"\n                }\n            ]\n        },\n        {\n            \"id\": \"51ddcbc1-52c8-43f5-907f-caafe6f11234\",\n            \"title\": \"Update Recipe\",\n            \"description\": \"Not Yummy!!\",\n            \"instructions\": \"Don't Cook\",\n            \"prep_duration\": 20,\n            \"cook_duration\": 10,\n            \"thumbnail\": null,\n            \"cuisine\": {\n                \"id\": \"6368a720-51f1-49ce-9a39-3cdddc1a79f6\",\n                \"name\": \"Chinese\"\n            },\n            \"ingredients\": [\n                {\n                    \"id\": \"e66cf8f0-d825-4ff0-bf79-41ff54db3863\",\n                    \"name\": \"Refined Oil\",\n                    \"image\": \"/ingredient_images/Screenshot_from_2025-07-06_14-40-29.png\"\n                }\n            ],\n            \"step_pictures\": [\n                {\n                    \"id\": \"f1e5bb72-b5dd-424f-bec3-14034df13014\",\n                    \"image\": \"/step_pictures/Screenshot_from_2025-07-06_14-40-29.png\"\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Detail of Receipe",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/app/detail-recipe/25d99262-87f9-4b3e-b0c8-d33c7735b25b/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"app",
+										"detail-recipe",
+										"25d99262-87f9-4b3e-b0c8-d33c7735b25b",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 10 Jul 2025 21:19:56 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "840"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"25d99262-87f9-4b3e-b0c8-d33c7735b25b\",\n    \"title\": \"Test Recipe\",\n    \"description\": \"Yummy\",\n    \"instructions\": \"Don't Cook\",\n    \"prep_duration\": 20,\n    \"cook_duration\": 10,\n    \"thumbnail\": \"/thumbnails/Screenshot_from_2025-07-06_14-40-29_jthkZn0.png\",\n    \"cuisine\": {\n        \"id\": \"6368a720-51f1-49ce-9a39-3cdddc1a79f6\",\n        \"name\": \"Chinese\"\n    },\n    \"ingredients\": [\n        {\n            \"id\": \"e66cf8f0-d825-4ff0-bf79-41ff54db3863\",\n            \"name\": \"Refined Oil\",\n            \"image\": \"/ingredient_images/Screenshot_from_2025-07-06_14-40-29.png\"\n        },\n        {\n            \"id\": \"a1bf6758-6fa7-4011-849c-5a411d7eceb4\",\n            \"name\": \"Onion\",\n            \"image\": \"/ingredient_images/Screenshot_from_2025-07-06_14-40-29_b9OgsOH.png\"\n        }\n    ],\n    \"step_pictures\": [\n        {\n            \"id\": \"dd8523a8-1188-4ab7-b661-f9eff09a9840\",\n            \"image\": \"/step_pictures/Screenshot_from_2025-07-06_14-40-29_9tKY2No.png\"\n        },\n        {\n            \"id\": \"f1e5bb72-b5dd-424f-bec3-14034df13014\",\n            \"image\": \"/step_pictures/Screenshot_from_2025-07-06_14-40-29.png\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Cuisine Stats",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "New Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/api/v1/app/cuisine-stats/",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"app",
+										"cuisine-stats",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Thu, 10 Jul 2025 21:24:25 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.12.3"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "401"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 3,\n    \"offset\": 0,\n    \"limit\": 10,\n    \"results\": [\n        {\n            \"cuisine_id\": \"406e1d8a-0fe8-419b-83f2-fd86c105e684\",\n            \"cuisine_name\": \"Refined Oil\",\n            \"recipe_count\": 0,\n            \"average_rating\": null\n        },\n        {\n            \"cuisine_id\": \"6368a720-51f1-49ce-9a39-3cdddc1a79f6\",\n            \"cuisine_name\": \"Chinese\",\n            \"recipe_count\": 4,\n            \"average_rating\": 2.5\n        },\n        {\n            \"cuisine_id\": \"fc959e01-2736-45bd-9708-e989413b6f12\",\n            \"cuisine_name\": \"Indian\",\n            \"recipe_count\": 0,\n            \"average_rating\": null\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "receipe card pdf download",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{access_token}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/app/receipe-pdf/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"app",
+								"receipe-pdf",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
