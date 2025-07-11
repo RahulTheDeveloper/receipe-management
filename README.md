@@ -102,37 +102,43 @@ recipe-management/
 # Base URL - http://3.110.54.154:8000/
 
 ### 🔨 Creator
-| Endpoint | Description |
-|----------|-------------|
-Method	Endpoint	Description
-POST	/api/v1/app/create-receipe/	Create a new recipe
-PUT	/api/v1/app/update-receipe/<uuid:pk>/	Update an existing recipe (partial allowed)
-DELETE	/api/v1/app/delete-receipe/?id=<uuid>	Delete a recipe using query param id
-POST	/api/v1/app/create-ingredients/	Create ingredients
-POST	/api/v1/app/create-cuisine/	Create cuisine
-POST	/api/v1/app/create-step-picture/	Upload step pictures
+| Method | Endpoint                                | Description                                 |
+| ------ | --------------------------------------- | ------------------------------------------- |
+| POST   | `/api/v1/app/create-receipe/`           | Create a new recipe                         |
+| PUT    | `/api/v1/app/update-receipe/<uuid:pk>/` | Update an existing recipe (partial allowed) |
+| DELETE | `/api/v1/app/delete-receipe/?id=<uuid>` | Delete a recipe using query param `id`      |
+| POST   | `/api/v1/app/create-ingredients/`       | Create ingredients                          |
+| POST   | `/api/v1/app/create-cuisine/`           | Create cuisine                              |
+| POST   | `/api/v1/app/create-step-picture/`      | Upload step pictures                        |
+
 
 ---
 
 ### 👀 Viewer
-| Endpoint | Description |
-|----------|-------------|
-Method	Endpoint	Description
-GET	/api/v1/app/list-recipes/	List all recipes (supports pagination)
-GET	/api/v1/app/detail-recipe/<uuid:pk>/	Get detailed info of a recipe
-GET	/api/v1/app/recipe-pdf/?id=<uuid>	Download recipe card as PDF
-GET	/api/v1/app/cuisine-stats/	Get recipe count & average ratings by cuisine
+| Method | Endpoint                               | Description                                   |
+| ------ | -------------------------------------- | --------------------------------------------- |
+| GET    | `/api/v1/app/list-recipes/`            | List all recipes (supports pagination)        |
+| GET    | `/api/v1/app/detail-recipe/<uuid:pk>/` | Get detailed info of a recipe                 |
+| GET    | `/api/v1/app/recipe-pdf/?id=<uuid>`    | Download recipe card as PDF                   |
+| GET    | `/api/v1/app/cuisine-stats/`           | Get recipe count & average ratings by cuisine |
+
 
 
 ### ⭐ Favourites & Ratings
-Method	Endpoint	Description
-POST	/api/v1/app/create-favourites/?recipe_id=<uuid>	Mark a recipe as favourite
-DELETE	/api/v1/app/create-favourites/?recipe_id=<uuid>	Remove recipe from favourites
-POST	/api/v1/app/create-ratings/	Submit a rating { "recipe": <uuid>, "score": 4 }
+| Method | Endpoint                                          | Description                                        |
+| ------ | ------------------------------------------------- | -------------------------------------------------- |
+| POST   | `/api/v1/app/create-favourites/?recipe_id=<uuid>` | Mark a recipe as favourite                         |
+| DELETE | `/api/v1/app/create-favourites/?recipe_id=<uuid>` | Remove recipe from favourites                      |
+| POST   | `/api/v1/app/create-ratings/`                     | Submit a rating `{ "recipe": <uuid>, "score": 4 }` |
+
 ---
 
 ### 📄 Excel Bulk Upload
-Method	Endpoint	Description
+
+| Method | Endpoint                    | Description                                           |
+| ------ | --------------------------- | ----------------------------------------------------- |
+| POST   | `/api/v1/app/upload-excel/` | Upload Excel file to bulk create recipes (via Celery) |
+
 POST	/api/v1/app/upload-excel/	Upload Excel file to bulk create recipes (processed via Celery)
 
 ## 📄 Excel Bulk Upload Format
