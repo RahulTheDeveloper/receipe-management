@@ -1,5 +1,8 @@
 # 🚀 Recipe Management System
 
+
+
+
 A Django REST Framework based API for managing recipes, built as part of a technical assessment.
 
 ## ✍️ Features
@@ -55,6 +58,8 @@ You can use the provided Postman collection to test the entire API.
 ---
 
 ## 🚀 API Endpoints
+
+# Base URL - http://3.110.54.154:8000/
 
 ### 🔨 Creator
 | Endpoint | Description |
