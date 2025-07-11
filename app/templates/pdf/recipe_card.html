@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ recipe.title }} - Recipe Card</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: #333;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .thumbnail img, .step-image img {
+            max-width: 400px;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        ul {
+            list-style: disc;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ recipe.title }}</h1>
+
+    <div class="section thumbnail">
+    <strong>Thumbnail:</strong><br>
+    {% if recipe.thumbnail %}
+        <img src="{{ recipe.thumbnail.url }}" alt="Thumbnail">
+    {% else %}
+        <p>No thumbnail available.</p>
+    {% endif %}
+    </div>
+
+    <div class="section">
+        <strong>Description:</strong>
+        <p>{{ recipe.description }}</p>
+    </div>
+
+    <div class="section">
+        <strong>Instructions:</strong>
+        <p>{{ recipe.instructions }}</p>
+    </div>
+
+    <div class="section">
+        <strong>Prep Duration:</strong> {{ recipe.prep_duration }} mins <br>
+        <strong>Cook Duration:</strong> {{ recipe.cook_duration }} mins
+    </div>
+
+    <div class="section">
+        <strong>Cuisine:</strong> {{ recipe.cuisine.name }}
+    </div>
+
+    <div class="section">
+        <strong>Ingredients:</strong>
+        <ul>
+            {% for ingredient in recipe.ingredients.all %}
+                <li>{{ ingredient.name }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="section">
+        <strong>Step by Step Pictures:</strong><br>
+        {% for step_pic in recipe.step_pictures.all %}
+            <div class="step-image">
+                <img src="{{ step_pic.image.url }}" alt="Step image">
+            </div>
+        {% empty %}
+            <p>No step images available.</p>
+        {% endfor %}
+    </div>
+</body>
+</html>

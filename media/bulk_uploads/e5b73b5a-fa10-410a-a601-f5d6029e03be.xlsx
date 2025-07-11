@@ -1,0 +1,7 @@
+title,description,instructions,prep_duration,cook_duration,cuisine_id,ingredient_ids
+,,,,,,
+Recipe 1,Desc 1,Steps 1,10,20,6e3c30b8-663d-4305-957a-fe8dde295e76,29471733-3bf8-456b-990b-d9533977db1c
+"Recipe 2
+",Desc 2,Steps 2,30,50,df090b0f-76be-4a7c-bad0-cdcac73e4ba1,f9c94475-ece6-4d7a-8465-8493d67c04d8
+Recipe 3,Desc 3,Steps 3,32,42,6e3c30b8-663d-4305-957a-fe8dde295e76,"29471733-3bf8-456b-990b-d9533977db1c, f9c94475-ece6-4d7a-8465-8493d67c04d8"
+Recipe 4,Desc 4,Steps 4,18,43,df090b0f-76be-4a7c-bad0-cdcac73e4ba1,f9c94475-ece6-4d7a-8465-8493d67c04d8
