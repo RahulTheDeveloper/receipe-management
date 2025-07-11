@@ -30,7 +30,6 @@ A Django REST Framework based API for managing recipes, built as part of a techn
 | Database    | PostgreSQL                |
 | Caching     | Redis                     |
 | Task Queue  | Celery                    |
-| Web Server  | Nginx                     |
 | Deployment  | Docker, AWS (EC2)    |
 
 
