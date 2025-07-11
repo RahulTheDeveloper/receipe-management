@@ -19,6 +19,27 @@ A Django REST Framework based API for managing recipes, built as part of a techn
 
 ---
 
+## 🚀 Postman Collection
+
+You can use the provided Postman collection to test the entire API.
+
+- [📥 Download Postman Collection](https://github.com/PrabhatTheCoder/receipe-management/blob/fc852d453e80966b6973752e5628546370716c54/Receipe%20Management.postman_collection.json)
+
+### 🔥 How to use
+1. Open Postman > Import > Upload `recipe-management-collection.json`.
+2. Set the environment variables for:
+   - `{{base_url}}` = `http://localhost:8000/api/v1/app`
+   - `{{access_token}}` (optional if using authenticated endpoints)
+3. Run your requests.
+
+✅ Contains examples for:
+- Creating recipes
+- Bulk upload with Excel
+- Marking favourites
+- Downloading recipe PDF
+- Getting counts & ratings
+
+
 ## 📁 Project Structure
 
 ├── app/ # Django app with models, views, serializers
