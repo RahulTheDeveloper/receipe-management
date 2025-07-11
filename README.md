@@ -104,25 +104,36 @@ recipe-management/
 ### 🔨 Creator
 | Endpoint | Description |
 |----------|-------------|
-| `POST /api/v1/app/recipes/` | Create a recipe |
-| `PUT /api/v1/app/recipes/<uuid:pk>/` | Update recipe (partial allowed) |
-| `DELETE /api/v1/app/recipes/` | Delete recipe (uses query param `?id=<uuid>`) |
-| `POST /api/v1/app/upload-excel/` | Bulk upload recipes via Excel (processed via Celery) |
+Method	Endpoint	Description
+POST	/api/v1/app/create-receipe/	Create a new recipe
+PUT	/api/v1/app/update-receipe/<uuid:pk>/	Update an existing recipe (partial allowed)
+DELETE	/api/v1/app/delete-receipe/?id=<uuid>	Delete a recipe using query param id
+POST	/api/v1/app/create-ingredients/	Create ingredients
+POST	/api/v1/app/create-cuisine/	Create cuisine
+POST	/api/v1/app/create-step-picture/	Upload step pictures
 
 ---
 
 ### 👀 Viewer
 | Endpoint | Description |
 |----------|-------------|
-| `GET /api/v1/app/recipes/` | List recipes (offset pagination) |
-| `GET /api/v1/app/recipes/<uuid:pk>/` | Recipe detail |
-| `POST /api/v1/app/favourites/` | Mark as favourite (query param `?recipe_id=<uuid>`) |
-| `DELETE /api/v1/app/favourites/` | Remove from favourites (query param) |
-| `POST /api/v1/app/ratings/` | Submit a rating `{ "recipe": <uuid>, "score": 4 }` |
-| `GET /api/v1/app/recipe-counts/` | Recipes count & average rating by cuisine |
-| `GET /api/v1/app/recipe-pdf/?id=<uuid>` | Download recipe card as PDF |
+Method	Endpoint	Description
+GET	/api/v1/app/list-recipes/	List all recipes (supports pagination)
+GET	/api/v1/app/detail-recipe/<uuid:pk>/	Get detailed info of a recipe
+GET	/api/v1/app/recipe-pdf/?id=<uuid>	Download recipe card as PDF
+GET	/api/v1/app/cuisine-stats/	Get recipe count & average ratings by cuisine
 
+
+### ⭐ Favourites & Ratings
+Method	Endpoint	Description
+POST	/api/v1/app/create-favourites/?recipe_id=<uuid>	Mark a recipe as favourite
+DELETE	/api/v1/app/create-favourites/?recipe_id=<uuid>	Remove recipe from favourites
+POST	/api/v1/app/create-ratings/	Submit a rating { "recipe": <uuid>, "score": 4 }
 ---
+
+### 📄 Excel Bulk Upload
+Method	Endpoint	Description
+POST	/api/v1/app/upload-excel/	Upload Excel file to bulk create recipes (processed via Celery)
 
 ## 📄 Excel Bulk Upload Format
 
