@@ -132,9 +132,15 @@ recipe-management/
 
 Upload an **`.xlsx` file** with columns:
 
-| title | description | instructions | prep_duration | cook_duration | cuisine_id | ingredient_ids |
-|-------|-------------|--------------|---------------|---------------|------------|----------------|
-| string | string | string | int | int | uuid | comma-separated uuids |
+You can use this sample Excel sheet to test the **bulk upload API** for recipes.
+
+👉 **[Download sample_recipes.xlsx](https://github.com/PrabhatTheCoder/receipe-management/blob/main/Receipe_Excel.xlsx)**
+
+| title          | description    | instructions       | prep_duration | cook_duration | cuisine_id                          | ingredient_ids                                     |
+|----------------|----------------|--------------------|---------------|---------------|-------------------------------------|----------------------------------------------------|
+| Test Recipe 1  | Yummy Dish 1   | Do not cook.       | 20            | 10            | 6368a720-51f1-49ce-9a39-3cdddc1a79f6 | ["e66cf8f0-d825-4ff0-bf79-41ff54db3863"]           |
+| Test Recipe 2  | Yummy Dish 2   | Just watch.        | 30            | 15            | 6368a720-51f1-49ce-9a39-3cdddc1a79f6 | ["a1bf6758-6fa7-4011-849c-5a411d7eceb4"]           |
+
 
 ## ⚙️ Installation
 
