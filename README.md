@@ -57,13 +57,42 @@ You can use the provided Postman collection to test the entire API.
 
 ## 📁 Project Structure
 
-├── app/ # Django app with models, views, serializers
-├── templates/pdf/ # HTML template for recipe PDF card
-├── media/ # Uploaded files (thumbnails, step pictures, Excel files)
-├── requirements.txt # Python requirements
-├── docker-compose.yml # Docker services: Django, Postgres, Redis, Celery
-├── Dockerfile # Python 3.10 slim image
-├── README.md # This file
+recipe-management/
+│
+├── app/                  # Django app for recipes, cuisines, ingredients, ratings, favourites
+│   ├── migrations/
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py         # All core models: Recipe, Cuisine, Ingredient, etc.
+│   ├── serializers.py    # DRF serializers
+│   ├── permissions.py    # Custom permissions (IsCreator, IsViewer, etc.)
+│   ├── views.py          # API views
+│   ├── urls.py           # API routes for this app
+│   └── tests.py
+│
+├── users/                # Custom user model with user_type (creator / viewer)
+│   ├── migrations/
+│   ├── __init__.py
+│   ├── models.py
+│   ├── serializers.py
+│   ├── views.py
+│   ├── urls.py
+│   └── admin.py
+│
+├── media/                # Uploaded media files (thumbnails, step pictures, ingredient images)
+│
+├── recipe_management/    # Main Django project config
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py           # Includes app + users urls
+│   ├── wsgi.py
+│   └── asgi.py
+│
+├── manage.py             # Django management script
+├── requirements.txt      # Python dependencies
+└── README.md             # Project documentation
+
 
 
 
