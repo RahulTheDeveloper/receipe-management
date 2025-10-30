@@ -37,7 +37,7 @@ A Django REST Framework based API for managing recipes, built as part of a techn
 
 You can use the provided Postman collection to test the entire API.
 
-- [📥 Download Postman Collection](https://github.com/PrabhatTheCoder/receipe-management/blob/fc852d453e80966b6973752e5628546370716c54/Receipe%20Management.postman_collection.json)
+- [📥 Download Postman Collection](https://github.com/RahulTheDeveloper/receipe-management/blob/fc852d453e80966b6973752e5628546370716c54/Receipe%20Management.postman_collection.json)
 
 ### 🔥 How to use
 1. Open Postman > Import > Upload `recipe-management-collection.json`.
@@ -157,7 +157,7 @@ Upload an **`.xlsx` file** with columns:
 
 You can use this sample Excel sheet to test the **bulk upload API** for recipes.
 
-👉 **[Download sample_recipes.xlsx](https://github.com/PrabhatTheCoder/receipe-management/blob/main/Receipe_Excel.xlsx)**
+👉 **[Download sample_recipes.xlsx](https://github.com/RahulTheDeveloper/receipe-management/blob/main/Receipe_Excel.xlsx)**
 
 | title          | description    | instructions       | prep_duration | cook_duration | cuisine_id                          | ingredient_ids                                     |
 |----------------|----------------|--------------------|---------------|---------------|-------------------------------------|----------------------------------------------------|
